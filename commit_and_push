@@ -1,0 +1,11 @@
+#!/bin/bash
+if [ -n "$1" ]
+then
+  echo "Commiting - $1"
+else
+  echo "Usage : ./commit_and_push \"Commit message\""
+  exit
+fi
+
+sqlite3 songs.sqlite .dump > songs.txt
+git commit -a -m $1
