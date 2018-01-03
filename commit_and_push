@@ -9,3 +9,4 @@ fi
 
 sqlite3 songs.sqlite .dump > songs.txt
 git commit -a -m "$1"
+pit push
