@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 if [ -n "$1" ]
 then
   echo "Commiting - $1"
@@ -11,5 +11,5 @@ fi
 sqlite3 songs.sqlite .dump > songs.txt
 
 #Commit and push
-git commit -a -m $1
+git commit -a --message "$1"
 git push
