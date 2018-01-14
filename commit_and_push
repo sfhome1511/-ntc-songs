@@ -11,5 +11,5 @@ fi
 sqlite3 songs.sqlite .dump > songs.txt
 
 #Commit and push
-git commit -a -m "$1"
+git commit -a -m $1
 git push
